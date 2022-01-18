@@ -8,18 +8,19 @@ export async function main(ns) {
 	const minSec = ns.getServerMinSecurityLevel(targetName);
 	const sec = ns.getServerSecurityLevel(targetName);
 
-	var hackthreads = `${Math.ceil(ns.hackAnalyzeThreads(targetName, serverMoney))}`
+	/*	var hackthreads = `${Math.ceil(ns.hackAnalyzeThreads(targetName, serverMoney))}`
 	ns.tprint('hack '+hackthreads)
 
 	var growthreads = `${Math.ceil(ns.growthAnalyze(targetName, maxMoney / 1 ))}`
 	ns.tprint('grow '+ growthreads)
 
 	var weakenthreads = `${Math.ceil((sec - minSec) * 20)}`
-	ns.tprint('weaken '+ weakenthreads)
+	ns.tprint('weaken '+ weakenthreads)*/
 	
 	return
-	ns.exec('MhackGrow.js', targetName, growthreads)
-	ns.exec('MhackWeaken.js', targetName, weakenthreads)
-	ns.exec('MhackHack.js', targetName, hackthreads)
+	ns.exec('MhackGrow.js', targetName, )
+	ns.exec('MhackWeaken.js', targetName, )
+	ns.exec('MhackHack.js', targetName, )
+	ns.exec('MhackWeaken2.js', targetName, )
 
 }

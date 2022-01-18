@@ -35,11 +35,10 @@ export async function main(ns) {
          await ns.grow(target)
 
          // Defines how many threads to use to hack a certain amount 
-         var hackthreads = `${Math.ceil(ns.hackAnalyzeThreads(target, serverMoney))}`
-         ns.tprint('hack ' + hackthreads)
+         let hackthreads = `${Math.ceil(ns.hackAnalyzeThreads(target, serverMoney))}`
+         //ns.tprint('hack ' + hackthreads)
 
       } else if (ns.getServerMaxRam / ns.getScriptRam > hackthreads) {
-         // Otherwise, hack it
          await ns.hack(target, { threads: hackthreads / 100 })
 
       } else {
