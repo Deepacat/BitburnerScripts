@@ -1,6 +1,6 @@
 /** @param {import("./Netscript").NS} ns**/
 export async function main(ns) {
-// nwaoidnawkudnwqaiun
+
 	var servername = ns.args[0]
 
 	if (ns.fileExists("BruteSSH.exe")) {
